@@ -21,3 +21,28 @@ mocking
 
 * http://www.voidspace.org.uk/python/mock/getting-started.html
 * `pip install mock`
+
+### where to patch
+* http://www.voidspace.org.uk/python/mock/patch.html#where-to-patch
+* scenario
+
+```
+a.py
+    -> Defines SomeClass
+
+b.py
+    -> from a import SomeClass
+    -> use SomeClass
+```
+
+do `@patch(‘b.SomeClass’)`
+
+but if its
+
+```
+b.py
+    -> import a impo
+    -> use a.SomeClass
+```
+
+do `@patch(‘a.SomeClass’)`
