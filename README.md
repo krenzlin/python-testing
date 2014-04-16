@@ -14,3 +14,10 @@ py.test --cov . test_all.py --cov-report=html --cov-report=term
 * not sure about how . and test_all are interacting
 * but with this it test every py module in place
 * but it seems like its not running the authors.py
+
+
+mocking
+=======
+
+* http://www.voidspace.org.uk/python/mock/getting-started.html
+* `pip install mock`
