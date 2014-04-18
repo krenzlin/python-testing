@@ -46,3 +46,7 @@ b.py
 ```
 
 do `@patch(‘a.SomeClass’)`
+
+talks
+====
+* https://www.youtube.com/watch?v=ukm64IUANwE
