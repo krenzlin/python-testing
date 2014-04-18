@@ -15,6 +15,9 @@ py.test --cov . test_all.py --cov-report=html --cov-report=term
 * but with this it test every py module in place
 * but it seems like its not running the authors.py
 
+```
+coverage run --branch `which py.test`
+```
 
 mocking
 =======
