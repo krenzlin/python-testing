@@ -19,6 +19,9 @@ py.test --cov . test_all.py --cov-report=html --cov-report=term
 coverage run --branch `which py.test`
 ```
 
+diff-coverage
+* https://github.com/edx/diff-cover
+
 mocking
 =======
 
