@@ -58,6 +58,13 @@ if __name__ == '__main__':
     print mean([100, 300]), 'should be 200'
 ```
 
+### 3. the `assert` statement
+
+```python
+if __name__ == '__main__':
+    assert mean([10, 20]) == 15
+    assert mean([100, 300]) == 200
+```
 
 coverage
 ========
