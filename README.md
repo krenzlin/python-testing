@@ -1,3 +1,34 @@
+Testing (with Python)
+=====================
+* importance and usefulness are well known
+* but still often unsued
+* two major problems (beside many more)
+ * inconvenient to write and need for boilerplate code
+ * seen as useful but optional tool
+* try to tackle both problems
+ * py.test &rarr; easy to write and use tests for python
+ * testing as a essential part of software development
+
+why testing?
+============
+* verify (written) code
+* also usefull in reverse to demonstrate errors, bugs and missing functionality
+ * e.g. in bug fixing
+ * write test that exploits the bug
+ * fix the bug
+ * test again to verify the fix
+* confidence-building benefits
+ * Did I break it?
+ * Can I fix it?
+ * Lets try it!
+* obtain new view on your code
+ * modularity and coupling
+ * API and overal design
+ * code smells
+* tests as additional specs
+ * reimplement software by using the tests
+* **good** tests &rarr; maintainable and reusable code (&rarr; better code)
+
 coverage
 ========
 
