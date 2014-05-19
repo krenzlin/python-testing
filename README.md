@@ -61,10 +61,22 @@ if __name__ == '__main__':
 ### 3. the `assert` statement
 
 ```python
-if __name__ == '__main__':
-    assert mean([10, 20]) == 15
-    assert mean([100, 300]) == 200
+assert mean([10, 20]) == 15
+assert mean([100, 300]) == 200
 ```
+
+```python
+assert True
+assert 2 > 1
+assert True != False
+```
+
+### 4. use `unittest`
+
+```python
+
+```
+
 
 coverage
 ========
