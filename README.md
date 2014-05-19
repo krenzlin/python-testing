@@ -29,6 +29,36 @@ why testing?
  * reimplement software by using the tests
 * **good** tests &rarr; maintainable and reusable code (&rarr; better code)
 
+
+how to test?
+============
+`mymodule.py`
+
+```python
+def mean(list_of_numbers):
+    """"Return mean of a list of numbers."""
+    return sum(list_of_numbers) / len(list_of_numbers)
+```
+
+### 1. fire up the python shell
+
+```python
+>>> from mymodule import mean
+>>> mean([10, 20])
+15
+>>> mean([100, 300])
+200
+```
+
+### 2. make it a file
+
+```python
+if __name__ == '__main__':
+    print mean([10, 20]), 'should be 15'
+    print mean([100, 300]), 'should be 200'
+```
+
+
 coverage
 ========
 
