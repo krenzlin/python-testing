@@ -81,8 +81,9 @@ AssertionError
 ```
 
 ```python
-assert mean([10, 20]) == 15
-assert mean([100, 300]) == 200
+if __name__ == '__main__':
+    assert mean([10, 20]) == 15
+    assert mean([100, 300]) == 200
 ```
 
 ### 4. use `unittest`
@@ -109,6 +110,8 @@ Ran 1 test in 0.000s
 
 OK
 ```
+
+#### failing test
 
 ```python
 self.assertEqual(mean([1, 2]), 1.5)
@@ -185,6 +188,31 @@ collected 1 items
 test_mymodule.py .
 
 =========================== 1 passed in 0.02 seconds ==========================
+```
+
+#### failing test
+
+
+```
+$ py.test 
+============================= test session starts ==============================
+platform linux2 -- Python 2.6.6 -- pytest-2.3.5
+collected 1 items 
+
+test_mymodule.py F
+
+=================================== FAILURES ===================================
+__________________________________ test_mean ___________________________________
+
+    def test_mean():
+        assert mean([10, 20]) == 15
+        assert mean([100, 300]) == 200
+>       assert mean([1, 2]) == 1.5
+E       assert 1 == 1.5
+E        +  where 1 = mean([1, 2])
+
+test_mymodule.py:7: AssertionError
+=========================== 1 failed in 0.01 seconds ===========================
 ```
 
 **py.test runs unittest, nose and even doctest**
