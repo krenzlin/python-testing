@@ -158,6 +158,7 @@ assertNotIsInstance(a, b)| 	not isinstance(a, b) 	*
 
 \* Python 2.7+
 
+
 py.test
 =======
 
