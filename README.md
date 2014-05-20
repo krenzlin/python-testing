@@ -160,7 +160,7 @@ assertNotIsInstance(a, b)| 	not isinstance(a, b) 	*
 
 py.test
 =======
-`test_mean.py`
+`test_mymodule.py`
 
 ```python
 from mymodule import mean
@@ -171,9 +171,16 @@ def test_mean():
     assert mean([100, 300]) == 200
 ```
 
-`py.test`
+```
+$ py.test
+============================= test session starts ==============================
+platform linux2 -- Python 2.6.6 -- pytest-2.3.5
+collected 1 items 
 
+test_mymodule.py .
 
+=========================== 1 passed in 0.02 seconds ==========================
+```
 
 coverage
 ========
