@@ -10,8 +10,10 @@ Testing (with Python)
  * testing as a essential part of software development
 
 
-what to test?
-=============
+##### testing in this context = automatic tests
+
+what?
+=====
 * everything 
  * from single functions to executing the whole application
 * unit test - smallest unit of functionality (function/method)
