@@ -272,6 +272,15 @@ when to test?
  * test when you modify existing code
 
 
+conclusion
+==========
+
+* test as often as possible
+* test as much as possible 
+* write tests for what you add or change
+* write tests before you code
+* don't rely blindly on your tests
+
 coverage
 ========
 
