@@ -74,6 +74,12 @@ if __name__ == '__main__':
     print mean([100, 300]), 'should be 200'
 ```
 
+```
+$ python mymodule.py
+15 should be 15
+200 should be 200
+```
+
 ### 3. the `assert` statement
 ```python
 >>> assert True
