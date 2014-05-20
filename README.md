@@ -201,18 +201,23 @@ def mean(list_of_numbers):
 ```
 
 ```
-$ py.test -v --doctest-modules mymodule.py
+$ py.test -v --doctest-modules
 ============================= test session starts ==============================
 platform linux2 -- Python 2.6.6 -- pytest-2.3.5 -- /usr/bin/python
-collected 1 items 
+collected 3 items 
 
 mymodule.py: [doctest] PASSED
+test_mymodule.py: [doctest] PASSED
+test_mymodule.py:4: test_mean PASSED
 
 =========================== 1 passed in 0.02 seconds ===========================
 ```
 
 * `py.test -v` verbose output
 * `py.test -s` print stdout/stderr
+* `py.test -k <pattern>` only execute tests that match <pattern>
+* **fixtures** (e.g. get fake files, monkeypatch stdlib, mock server, ...)
+
 
 coverage
 ========
