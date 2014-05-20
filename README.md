@@ -14,8 +14,11 @@ what to test?
 =============
 * everything 
  * from single functions to executing the whole application
-* distinction between unit tests and functional, integration and system tests
- * single unit (function, class) vs. complete behaviour
+* unit test - smallest unit of functionality (function/method)
+* integration test - combination of units
+* functional test - particular feature
+* system test - integrated system
+
 
 
 why testing?
