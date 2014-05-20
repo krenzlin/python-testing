@@ -4,7 +4,7 @@ Testing in Python
 py.test
 -------
 
-* install `pip install pytest`
+* installation: `pip install pytest`
 * uses `assert` statement
 ```python
 def mean(xs):
@@ -41,10 +41,16 @@ def test_mean_zero_division():
 problems with writing testable code
 -----------------------------------
 * implicit dependencies &rarr; dependency injection
-
 ```python
 def process_everything():
     db = Database()
     data = db.select('*')
     return process(data)
 ```
+&darr&;
+```python
+def process_everything(db):
+    data = db.select('*')
+    return process(data)
+```
+
