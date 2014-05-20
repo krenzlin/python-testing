@@ -9,9 +9,19 @@ Testing (with Python)
  * py.test &rarr; easy to write and use tests for python
  * testing as a essential part of software development
 
+
+what to test?
+=============
+* everything 
+ * from single functions to executing the whole application
+* distinction between unit tests and functional, integration and system tests
+ * single unit (function, class) vs. complete behaviour
+
+
 why testing?
 ============
 * verify (written) code
+  * expected behaviour
 * also usefull in reverse to demonstrate errors, bugs and missing functionality
  * e.g. in bug fixing
  * write test that exploits the bug
@@ -19,7 +29,7 @@ why testing?
  * test again to verify the fix
 * confidence-building benefits
  * Did I break it?
- * Can I fix it?
+ * Ca nI fix it?
  * Lets try it!
 * obtain new view on your code
  * modularity and coupling
@@ -27,7 +37,7 @@ why testing?
  * code smells
 * tests as additional specs
  * reimplement software by using the tests
-* **good** tests &rarr; maintainable and reusable code (&rarr; better code)
+* **good** tests &rarr; maintainable and reusable code (&rarr; better code?!)
 
 
 how to test?
