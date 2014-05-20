@@ -30,3 +30,21 @@ def test_mean_zero_division():
  * `test_*.py` or `*_test.py` files
  * `Test*` classes (without an `__init__` method)
  * `test_*` functions or methods are test items
+* usefull commands
+ * `py.test -v` verbose output
+ * `py.test -s` print stdout/stderr (hidden by default)
+ * `py.test -k <pattern>` only execute tests containing <pattern>
+* fixtures 
+* can also run nosetest, unittest and doctest 
+
+
+problems with writing testable code
+-----------------------------------
+* implicit dependencies &rarr; dependency injection
+
+```python
+def process_everything():
+    db = Database()
+    data = db.select('*')
+    return process(data)
+```
