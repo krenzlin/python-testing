@@ -271,10 +271,51 @@ when to test?
  * test when you create something new
  * test when you modify existing code
 
+testable code
+=============
+
+### problems when
+* implict dependencies &rarr; dependency injection
+ * reaching out to other classes
+
+```python
+def get_everything():
+    db = database.get()
+    
+    return db.select(*)
+```
+&darr;
+```python
+def proc_everything(db):
+    return db.select(*)
+```
+
+
+* functions that are easy to test
+ * have **no side effects**
+ * no implicit dependencies
+ * only try to solve one thing (Single responsibility principle) vs. **the god function**
+
+**Functions are fun. Write lots of the them, but keep them small and clear in purpose.**
+
+* Does your class really need all those methods?
+ * Most of the time you can turn them into pure functions with just one extra parameter
+
+* Dependency Injection instead of implicit dependencies
+
+
+
+
+red herings
+===========
+
+* big functions and classes - too much is going on &rarr; split into separate ones
+* many methods - are they really state dependend? &rarr; turn them into functions
 
 conclusion
 ==========
 
+* write many, small and clear functions 
 * test as often as possible
 * test as much as possible 
 * write tests for what you add or change
