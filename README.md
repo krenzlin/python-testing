@@ -86,10 +86,77 @@ assert mean([100, 300]) == 200
 ```
 
 ### 4. use `unittest`
-
 ```python
+import unittest
+from mymodule import mean
+
+class TestMymodule(unittest.TestCase):
+
+    def test_mean(self):
+        self.assertEqual(mean([10, 20]), 15)
+        self.assertEqual(mean([100, 300]), 200)
+
+ 
+if __name__ == '__main__':
+    unittest.main()
+```
 
 ```
+$ python unit.py
+.
+----------------------------------------------------------------------
+Ran 1 test in 0.000s
+
+OK
+```
+
+```python
+self.assertEqual(mean([1, 2]), 1.5)
+```
+
+```
+$ python unit.py
+.
+----------------------------------------------------------------------
+Ran 1 test in 0.000s
+
+OK
+```
+
+```
+$ python unit.py
+F
+======================================================================
+FAIL: test_mean (__main__.TestMymodule)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "unit.py", line 9, in test_mean
+    self.assertEqual(mean([1, 2]), 1.5)
+AssertionError: 1 != 1.5
+
+----------------------------------------------------------------------
+Ran 1 test in 0.000s
+
+FAILED (failures=1)
+```
+
+
+function | statement
+---------|----------
+assertEqual(a, b) | 	a == b 	 
+assertNotEqual(a, b) | 	a != b 	 
+assertTrue(x) |	bool(x) is True 	 
+assertFalse(x) |	bool(x) is False 	 
+assertIs(a, b) |	a is b 	*
+assertIsNot(a, b)| 	a is not b 	*
+assertIsNone(x) |	x is None 	*
+assertIsNotNone(x) |	x is not None 	*
+assertIn(a, b) |	a in b 	*
+assertNotIn(a, b) |	a not in b 	*
+assertIsInstance(a, b)| 	isinstance(a, b) 	*
+assertNotIsInstance(a, b)| 	not isinstance(a, b) 	*
+
+\* Python 2.7+
 
 py.test
 =======
