@@ -247,6 +247,30 @@ test_mymodule.py:4: test_mean PASSED
 * `py.test -k <pattern>` only execute tests that match <pattern>
 * **fixtures** (e.g. get fake files, monkeypatch stdlib, mock server, ...)
 
+#### expect Exceptions
+
+```python
+import pytest
+from mymodule import mean
+
+def test_mean_zero_divison():
+    with pytest.raises(ZeroDivisionError):
+        mean([])
+```
+
+when to test?
+=============
+
+`Always and everything.`
+
+* if you don't test it, it does not exist
+ * test that are not executed == no tests at all
+* Test Driven Development (TDD)
+ * tests before code
+* legacy code
+ * test when you create something new
+ * test when you modify existing code
+
 
 coverage
 ========
