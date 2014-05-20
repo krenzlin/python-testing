@@ -160,6 +160,10 @@ assertNotIsInstance(a, b)| 	not isinstance(a, b) 	*
 
 py.test
 =======
+
+* Holger Krekel (pypy)
+* combines testrunner with the assert statement
+
 `test_mymodule.py`
 
 ```python
@@ -181,6 +185,34 @@ test_mymodule.py .
 
 =========================== 1 passed in 0.02 seconds ==========================
 ```
+
+**py.test runs unittest, nose and even doctest**
+
+`mymodule.py`
+```python
+def mean(list_of_numbers):
+    """
+    Return mean of a list of numbers.
+    
+    >>> mean([20, 40])
+    30
+    """
+    return sum(list_of_numbers) / len(list_of_numbers)
+```
+
+```
+$ py.test -v --doctest-modules mymodule.py
+============================= test session starts ==============================
+platform linux2 -- Python 2.6.6 -- pytest-2.3.5 -- /usr/bin/python
+collected 1 items 
+
+mymodule.py: [doctest] PASSED
+
+=========================== 1 passed in 0.02 seconds ===========================
+```
+
+* `py.test -v` verbose output
+* `py.test -s` print stdout/stderr
 
 coverage
 ========
