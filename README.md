@@ -40,7 +40,7 @@ why testing?
  * modularity and coupling
  * API and overal design
  * code smells
-* tests as additional specs
+* tests as additional specs and documentation
  * reimplement software by using the tests
 * **good** tests &rarr; maintainable and reusable code (&rarr; better code?!)
 
