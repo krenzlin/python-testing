@@ -37,25 +37,3 @@ def test_mean_zero_division():
 * fixtures 
 * can also run nosetest, unittest and doctest 
 
-
-problems/code smells while writing testable code
------------------------------------
-* implicit dependencies &rarr; dependency injection
-```python
-def process_everything():
-    db = Database()
-    data = db.select('*')
-    return process(data)
-```
-&darr;
-```python
-def process_everything(db):
-    data = db.select('*')
-    return process(data)
-```
-
-* methods without state &rarr; separate into functions
-```pyhton
-class foo:
-    ...
-    def 
