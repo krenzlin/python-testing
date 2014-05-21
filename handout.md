@@ -38,7 +38,7 @@ def test_mean_zero_division():
 * can also run nosetest, unittest and doctest 
 
 
-problems with writing testable code
+problems/code smells while writing testable code
 -----------------------------------
 * implicit dependencies &rarr; dependency injection
 ```python
@@ -47,10 +47,15 @@ def process_everything():
     data = db.select('*')
     return process(data)
 ```
-&darr&;
+&darr;
 ```python
 def process_everything(db):
     data = db.select('*')
     return process(data)
 ```
 
+* methods without state &rarr; separate into functions
+```pyhton
+class foo:
+    ...
+    def 
